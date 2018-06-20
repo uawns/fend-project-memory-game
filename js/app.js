@@ -1,8 +1,23 @@
+// list of const
+const deck = document.getElementById('deck');
+
+
+const frag = document.createDocumentFragment();
+
 /*
  * Create a list that holds all of your cards
  */
 
-
+ const cards = [
+     'fa-diamond',
+     'fa-paper-plane-o',
+     'fa-anchor',
+     'fa-bolt',
+     'fa-cube',
+     'fa-leaf',
+     'fa-bicycle',
+     'fa-bomb'
+    ];
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -10,9 +25,13 @@
  *   - add each card's HTML to the page
  */
 
+ const cardset = cards.reduce(function(x,y){
+     return x.concat([y,y]);
+ }, []);
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    var currentIndex = array.length,
+        temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -26,6 +45,17 @@ function shuffle(array) {
 }
 
 
+shuffle(cardset).forEach(function createCard(card) {
+    const createList = document.createElement('li');
+    let innerCard = `<i class= 'fa ${card}' ></i>`;
+    createList.className= "card";
+    createList.innerHTML=innerCard;
+    frag.appendChild(createList);
+});
+
+deck.appendChild(frag);
+
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
@@ -36,3 +66,5 @@ function shuffle(array) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+
+
