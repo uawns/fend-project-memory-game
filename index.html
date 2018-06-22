@@ -22,9 +22,11 @@
         		<li><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span class="moves">3</span> Moves
-
-            <div class="restart">
+        	<span class="moves" id="movesCount">0 </span> Moves
+<div class="clock">
+    <i class="fa fa-clock-o"></i><span id="timer"> 0s </span>
+</div>
+            <div class="restart reset">
         		<i class="fa fa-repeat"></i>
         	</div>
         </section>
@@ -34,59 +36,16 @@
         <ul class="deck" id="deck">
 
         </ul>
-<!--
-        <ul class="deck">
-            <li class="card">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card match">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bolt"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
-            <li class="card match">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card open show">
-                <i class="fa fa-bolt"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
-        </ul> -->
     </div>
 
+<div id="winner" class="winner-modal hide">
+    <div class="winner-box">
+    <span class="trophy"> <i class="fa fa-trophy"></i>  </span>
+    <h2>Congratulation! You did it.</h2>
+    <p>with <span id="winmovecount"> 0 </span> moves, <span id="starcount">3</span> Star and <span id="timecount">0 s </span> time.</p>
+<button class="reset playagain">Play again!</button>
+</div>
+</div>
     <script src="js/app.js"></script>
 </body>
 </html>

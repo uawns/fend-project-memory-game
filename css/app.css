@@ -107,3 +107,65 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
+.clock {
+    display: inline-block;
+    margin-left: 25px;
+}
+.clock span{
+    margin-left: 5px;
+}
+
+.winner-modal{
+
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.winner-box{
+    display: block;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.trophy{
+    font-size: 100px;
+    color: gold;
+    text-shadow: 0px 3px 10px #fff;
+}
+
+.playagain{
+    font-size: 14px;
+    height: 40px;
+    background-color: #02ccba;
+    color: #fff;
+    border: 1px solid #08b3a4;
+    border-radius: 3px;
+    padding: 5px 25px;
+}
+.playagain:hover{
+     background-color: #04c4b4;
+}
+.playagain:active{
+    transform: translate(1px,1px);
+}
+.playagain:focus {
+    outline: none;
+}
+
+.hide{
+    display: none !important;
+    visibility: hidden;
+}
+
+.visible{
+    display: block;
+    visibility: visible;
+}
