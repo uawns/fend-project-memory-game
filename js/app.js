@@ -99,7 +99,6 @@ function moveCounter() {
         star[star.length - 1].classList.replace("fa-star","fa-star-o");
     }else if(moveCount > 20){
         starCount = 1;
-        console.log(star[star.length]);
         star[star.length-2].classList.replace("fa-star", "fa-star-o");
     }
 
