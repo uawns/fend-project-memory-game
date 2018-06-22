@@ -7,7 +7,7 @@
 
 ## Instructions
 
-Click on tiles to macth the cards. May be force with you!
+Click on tiles to match the cards. May force be with you!
 
 ## Contributing
 
